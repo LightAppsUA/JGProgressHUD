@@ -9,7 +9,12 @@ let package = Package(
     targets: [
         .target(
             name: "JGProgressHUD",
-            path: "JGProgressHUD/JGProgressHUD"
+            path: "JGProgressHUD/JGProgressHUD",
+            linkerSettings: [
+                .linkedFramework("UIKit"),
+                .linkedFramework("QuartzCore"),
+                .linkedFramework("CoreGraphics")
+            ]
         )
     ]
 )
