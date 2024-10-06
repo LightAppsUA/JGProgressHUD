@@ -4,17 +4,12 @@ import PackageDescription
 let package = Package(
     name: "JGProgressHUD",
     products: [
-        .library(name: "JGProgressHUD", targets: ["JGProgressHUD"])
+        .library(name: "JGProgressHUD", type: .dynamic, targets: ["JGProgressHUD"])
     ],
     targets: [
         .target(
             name: "JGProgressHUD",
-            path: "JGProgressHUD/JGProgressHUD",
-            linkerSettings: [
-                .linkedFramework("UIKit"),
-                .linkedFramework("QuartzCore"),
-                .linkedFramework("CoreGraphics")
-            ]
+            path: "JGProgressHUD/JGProgressHUD"
         )
     ]
 )
